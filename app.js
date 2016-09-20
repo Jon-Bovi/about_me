@@ -1,6 +1,6 @@
 'use strict';
 
-var name = prompt('What\'s your name?');
+var username = prompt('What\'s your username?');
 
 // Question 1
 var correctOrNot = 'correct';
@@ -9,7 +9,7 @@ console.log('User answer1 is ' + answer1);
 if (answer1 == 'yes' || answer1 == 'y') {
   correctOrNot = 'incorrect';
 }
-alert(name + ', you are ' + correctOrNot + '!');
+alert(username + ', you are ' + correctOrNot + '!');
 
 // Question 2
 correctOrNot = 'correct';
@@ -18,7 +18,7 @@ console.log('User answer2 is ' + answer2);
 if (answer2 == 'yes' || answer2 == 'y') {
   correctOrNot = 'incorrect';
 }
-alert(name + ', you are ' + correctOrNot + '!');
+alert(username + ', you are ' + correctOrNot + '!');
 
 // Question 3
 correctOrNot = 'incorrect';
@@ -27,7 +27,7 @@ console.log('User answer3 is ' + answer3);
 if (answer3 == 'yes' || answer3 == 'y') {
   correctOrNot = 'correct';
 }
-alert(name + ', you are ' + correctOrNot + '!');
+alert(username + ', you are ' + correctOrNot + '!');
 
 // Question 4
 correctOrNot = 'correct';
@@ -36,7 +36,7 @@ console.log('User answer4 is ' + answer4);
 if (answer4 == 'yes' || answer4 == 'y') {
   correctOrNot = 'incorrect';
 }
-alert(name + ', you are ' + correctOrNot + '!');
+alert(username + ', you are ' + correctOrNot + '!');
 
 // Question 5
 correctOrNot = 'incorrect';
@@ -45,4 +45,4 @@ console.log('User answer5 is ' + answer5);
 if (answer5 == 'yes' || answer5 == 'y') {
   correctOrNot = 'correct';
 }
-alert(name + ', you are ' + correctOrNot + '!');
+alert(username + ', you are ' + correctOrNot + '!');
