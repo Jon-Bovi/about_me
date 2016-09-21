@@ -14,19 +14,21 @@ div {
 
 header {
   text-align: center;
-  background-color: #1351cc;
+  background-image: url("TopbarGradient.png");
+  /*background-color: #1351cc;*/
   border-radius: 50%;
   border: 9px double #cccccc;
-  padding-top: 4px;
+  padding-top: 0px;
   margin: auto;
   width: 70%;
+  height: 80px;
 }
 
 section {
   border-radius: 8px;
   border: 1px solid black;
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 20px;
   background-color: #192333;
   margin: 5px auto;
 }
@@ -36,15 +38,15 @@ hr {
 }
 
 h1 {
-  display: inline;
-  margin-left: 30px;
+  margin: 3px auto 0px auto;
+  min-width: 300px;
   font-family: cursive;
-  text-shadow: 1px 2px black;
+  text-shadow: 1px 3px black;
 }
 
 h4 {
-  margin-left: 10px;
-  display: inline;
+  text-shadow: 1px 2px black;
+  margin: 0px;
   font-family: monospace;
 }
 
@@ -60,8 +62,9 @@ table {
 td {
   padding: 4px;
   padding-left: 20px;
+  min-width: 101px;
 }
 
 li {
-  padding-bottom: 5px;
+  line-height: 160%;
 }
