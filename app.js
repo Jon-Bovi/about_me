@@ -2,72 +2,93 @@
 
 var username = prompt('What\'s your username?');
 var score = 0;
+var questions = ['Do I prefer chicken breast to chicken thighs?', 'Is my favorite Harry Potter creature the hippogriff?', 'Do I know to dance the Soulja BoY?', 'Are the inner depths of my soul pitched in total blackness?', 'Do I have any hope for the future of America?'];
+var no = ['no', 'n'];
+var yes = ['yes', 'y'];
+var answers = [no, no, yes, no, yes];
 
-// Default correctness sets to incorrect before each question
-// Question 1
-var correctOrNot = 'incorrect';
-var answer1 = prompt('Do I prefer chicken breast to chicken thighs?').toLowerCase();
-console.log('User answer1 is ' + answer1);
-if (answer1 === 'no' || answer1 === 'n') {
-  correctOrNot = 'correct';
-  score++;
+var userAnswer, correctOrNot;
+for (var c = 0; c < 5; c++) {
+  userAnswer = prompt(questions[c]);
+  if (userAnswer === answers[c][0] || userAnswer === answers[c][1]) {
+    correctOrNot = 'correct';
+    score++;
+  }
+  else {
+    correctOrNot = 'incorrect';
+  }
+  alert(username + ', you are ' + correctOrNot + '!');
 }
-alert(username + ', you are ' + correctOrNot + '!');
 
-// Question 2
-correctOrNot = 'incorrect';
-var answer2 = prompt('Is my favorite Harry Potter creature the hippogriff?').toLowerCase();
-console.log('User answer2 is ' + answer2);
-if (answer2 === 'no' || answer2 === 'n') {
-  correctOrNot = 'correct';
-  score++;
-}
-alert(username + ', you are ' + correctOrNot + '!');
-
-// Question 3
-correctOrNot = 'incorrect';
-var answer3 = prompt('Do I know to dance the Soulja BoY?').toLowerCase();
-console.log('User answer3 is ' + answer3);
-if (answer3 === 'yes' || answer3 === 'y') {
-  correctOrNot = 'correct';
-  score++;
-}
-alert(username + ', you are ' + correctOrNot + '!');
-
-// Question 4
-correctOrNot = 'incorrect';
-var answer4 = prompt('Are the inner depths of my soul pitched in total blackness?').toLowerCase();
-console.log('User answer4 is ' + answer4);
-if (answer4 === 'no' || answer4 === 'n') {
-  correctOrNot = 'correct';
-  score++;
-}
-alert(username + ', you are ' + correctOrNot + '!');
-
-// Question 5
-correctOrNot = 'incorrect';
-var answer5 = prompt('Do I have any hope for the future of America?').toLowerCase();
-console.log('User answer5 is ' + answer5);
-if (answer5 === 'yes' || answer5 === 'y') {
-  correctOrNot = 'correct';
-  score++;
-}
-alert(username + ', you are ' + correctOrNot + '!');
+// // Default correctness sets to incorrect before each question
+// // Question 1
+// var correctOrNot = 'incorrect';
+// var answer1 = prompt('Do I prefer chicken breast to chicken thighs?').toLowerCase();
+// console.log('User answer1 is ' + answer1);
+// if (answer1 === 'no' || answer1 === 'n') {
+//   correctOrNot = 'correct';
+//   score++;
+// }
+// alert(username + ', you are ' + correctOrNot + '!');
+//
+// // Question 2
+// correctOrNot = 'incorrect';
+// var answer2 = prompt('Is my favorite Harry Potter creature the hippogriff?').toLowerCase();
+// console.log('User answer2 is ' + answer2);
+// if (answer2 === 'no' || answer2 === 'n') {
+//   correctOrNot = 'correct';
+//   score++;
+// }
+// alert(username + ', you are ' + correctOrNot + '!');
+//
+// // Question 3
+// correctOrNot = 'incorrect';
+// var answer3 = prompt('Do I know to dance the Soulja BoY?').toLowerCase();
+// console.log('User answer3 is ' + answer3);
+// if (answer3 === 'yes' || answer3 === 'y') {
+//   correctOrNot = 'correct';
+//   score++;
+// }
+// alert(username + ', you are ' + correctOrNot + '!');
+//
+// // Question 4
+// correctOrNot = 'incorrect';
+// var answer4 = prompt('Are the inner depths of my soul pitched in total blackness?').toLowerCase();
+// console.log('User answer4 is ' + answer4);
+// if (answer4 === 'no' || answer4 === 'n') {
+//   correctOrNot = 'correct';
+//   score++;
+// }
+// alert(username + ', you are ' + correctOrNot + '!');
+//
+// // Question 5
+// correctOrNot = 'incorrect';
+// var answer5 = prompt('Do I have any hope for the future of America?').toLowerCase();
+// console.log('User answer5 is ' + answer5);
+// if (answer5 === 'yes' || answer5 === 'y') {
+//   correctOrNot = 'correct';
+//   score++;
+// }
+// alert(username + ', you are ' + correctOrNot + '!');
 
 // Question 6
 var gotIt = false;
 var tries = 4;
+var age = Math.random() * 30 + 70;
 while (tries > 0 && !gotIt) {
   tries--;
-  var answer6 = prompt('How old is my oldest grandmother?');
-  if (answer6 === '97') {
+  var answer6 = parseInt(prompt('How old is my imaginary oldest grandmother?'));
+  if (answer6 === age) {
     alert('That\'s right!');
     score++;
     gotIt = true;
-  } else if (parseInt(answer6) <= 97) {
+  } else if (answer6 <= 97) {
     alert('Too low! You have ' + tries + ' more guesses.');
   } else {
     alert('Too high! You have ' + tries + ' more guesses.');
+  }
+  if (!gotIt && Math.abs(answer6 - age) < 3) {
+    alert('You\'re close!');
   }
 }
 
