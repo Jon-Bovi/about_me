@@ -9,7 +9,7 @@ var answers = [no, no, yes, no, yes];
 
 var userAnswer, correctOrNot;
 for (var c = 0; c < 5; c++) {
-  userAnswer = prompt(questions[c]);
+  userAnswer = prompt(questions[c]).toLowerCase();
   if (userAnswer === answers[c][0] || userAnswer === answers[c][1]) {
     correctOrNot = 'correct';
     score++;
@@ -74,7 +74,7 @@ for (var c = 0; c < 5; c++) {
 // Question 6
 var gotIt = false;
 var tries = 4;
-var age = Math.random() * 30 + 70;
+var age = Math.round(Math.random() * 30 + 70);
 while (tries > 0 && !gotIt) {
   tries--;
   var answer6 = parseInt(prompt('How old is my imaginary oldest grandmother?'));
@@ -90,6 +90,9 @@ while (tries > 0 && !gotIt) {
   if (!gotIt && Math.abs(answer6 - age) < 3) {
     alert('You\'re close!');
   }
+}
+if (!gotIt) {
+  alert('She is ' + age + ' years old.');
 }
 
 // Question 7
