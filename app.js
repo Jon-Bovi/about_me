@@ -74,29 +74,31 @@ while (tries > 0 && !gotIt) {
 // Question 7
 gotIt = false;
 tries = 6;
-var answers = ['water', 'arnold palmer', 'coffee', 'beer'];
-var numAnswers = answers.length;
+var foodList = ['celery', 'olives', 'kale', 'arugula', 'brazil nuts', 'hazelnuts', 'blue cheese'];
+var numFoods = foodList.length;
 while (tries > 0 && !gotIt) {
-  var answer7 = prompt('Name one of my top ' + answers.length + ' drinks \(alcoholic or not\)').toLowerCase();
-  for (var i = 0; i < numAnswers; i++) {
-    if (answer7 === answers[i]) {
+  tries--;
+  var answer7 = prompt('Name one of my top ' + foodList.length + ' least favorite foods. \(use the plural form when applicable\)').toLowerCase();
+  for (var i = 0; i < numFoods; i++) {
+    if (answer7 === foodList[i]) {
       alert('That is correct!');
       score++;
       gotIt = true;
     }
   }
-  if (!gotIt) {
-    tries--;
+  if (!gotIt && tries > 0) {
     alert('Try again. You have ' + tries + ' more guesses.');
+  } else if (tries === 0) {
+    alert('You have no more guesses.');
   }
 }
 
-var drinkList = 'In no particular order, my favorite drinks are: ' + answers[0];
-for (var j = 1; j < numAnswers - 1; j++) {
-  drinkList += (', ' + answers[j]);
+var foodSentence = 'In no particular order, my least favorite foods are: ' + foodList[0];
+for (var j = 1; j < numFoods - 1; j++) {
+  foodSentence += (', ' + foodList[j]);
 }
-drinkList += (', and ' + answers[numAnswers - 1] + '.');
-alert(drinkList);
+foodSentence += (', and ' + foodList[numFoods - 1] + '.');
+alert(foodSentence);
 
 var message;
 if (score === 7) {
