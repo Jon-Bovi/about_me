@@ -14,7 +14,7 @@ div {
 
 header {
   text-align: center;
-  background-color: #1351d8;
+  background-color: #1351cc;
   border-radius: 50%;
   border: 9px double #cccccc;
   padding-top: 4px;
@@ -23,12 +23,16 @@ header {
 }
 
 section {
-  border-radius: 2%;
+  border-radius: 8px;
   border: 1px solid black;
   padding-left: 15px;
   padding-right: 15px;
   background-color: #192333;
   margin: 5px auto;
+}
+
+hr {
+  border-color: black;
 }
 
 h1 {
