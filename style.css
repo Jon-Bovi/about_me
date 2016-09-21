@@ -1,3 +1,7 @@
+* {
+  font-family: arial;
+}
+
 body {
   background-image: url("ford-logo.png");
   color: #eeeeee;
@@ -14,20 +18,21 @@ header {
   background-color: #313034;
   border-radius: 2%;
   border: 2px solid black;
-  padding-top: 6px;
+  padding-top: 4px;
 }
 
 section {
   border-radius: 2%;
-  border: 4px solid black;
-  padding: 2px;
-  background-color: #332931;
+  border: 1px solid black;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #192333;
 }
 
 h1 {
   display: inline;
   margin-left: 30px;
-  font-family: fantasy;
+  font-family: cursive;
 }
 
 h4 {
@@ -37,10 +42,18 @@ h4 {
 
 p {
   padding-left: 20px;
-  padding
+  line-height: 130%;
+}
+
+table {
+  padding-bottom: 10px;
 }
 
 td {
   padding: 4px;
   padding-left: 20px;
+}
+
+li {
+  padding-bottom: 5px;
 }
