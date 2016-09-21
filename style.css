@@ -4,13 +4,11 @@
 
 body {
   background-image: url("ford-logo.png");
-  color: #eeeeee;
+  color: #eaeaea;
 }
 
 div {
-  border-radius: 3%;
   padding: 20px;
-  padding-bottom: 0px;
 }
 
 header {
