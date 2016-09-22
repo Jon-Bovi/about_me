@@ -3,24 +3,27 @@
 var username = prompt('What\'s your username?');
 console.log(username);
 var score = 0;
-var questions = ['Do I prefer chicken breast to chicken thighs?', 'Is my favorite Harry Potter creature the hippogriff?', 'Do I know to dance the Soulja BoY?', 'Are the inner depths of my soul pitched in total blackness?', 'Do I have any hope for the future of America?'];
-var no = ['no', 'n'];
-var yes = ['yes', 'y'];
-var answers = [no, no, yes, no, yes];
 
-var userAnswer, correctOrNot;
-for (var c = 0; c < 5; c++) {
-  userAnswer = prompt(questions[c]).toLowerCase();
-  if (userAnswer === answers[c][0] || userAnswer === answers[c][1]) {
-    correctOrNot = 'correct';
-    score++;
+function questions () {
+  var questions = ['Do I prefer chicken breast to chicken thighs?', 'Is my favorite Harry Potter creature the hippogriff?', 'Do I know to dance the Soulja BoY?', 'Are the inner depths of my soul pitched in total blackness?', 'Do I have any hope for the future of America?'];
+  var answers= ['no', 'n'];
+  var yes = ['yes', 'y'];
+  var answers = [no, no, yes, no, yes];
+  var userAnswer, correctOrNot;
+  for (var c = 0; c < 5; c++) {
+    userAnswer = prompt(questions[c]).toLowerCase();
+    if (userAnswer === answers[c][0] || userAnswer === answers[c][1]) {
+      correctOrNot = 'correct';
+      score++;
+    }
+    else {
+      correctOrNot = 'incorrect';
+    }
+    alert(username + ', you are ' + correctOrNot + '!');
+    console.log('#' + c + ': ' + username + ' answered ' + userAnswer + '. Correct answer is ' + answers[c] + '. Score is ' + score);
   }
-  else {
-    correctOrNot = 'incorrect';
-  }
-  alert(username + ', you are ' + correctOrNot + '!');
-  console.log('#' + c + ': ' + username + ' answered ' + userAnswer + '. Correct answer is ' + answers[c] + '. Score is ' + score);
-}
+
+
 
 // Question 6
 var triesLeft = 4;
