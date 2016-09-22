@@ -14,14 +14,14 @@ div {
 
 header {
   text-align: center;
-  background-image: url("TopbarGradient.png");
+  background-image: url("blue.jpg");
   /*background-color: #1351cc;*/
   border-radius: 50%;
   border: 9px double #cccccc;
   padding-top: 0px;
   margin: auto;
-  width: 70%;
-  height: 80px;
+  width: 77%;
+  height:300px;
 }
 
 section {
@@ -38,9 +38,10 @@ hr {
 }
 
 h1 {
-  margin: 3px auto 0px auto;
+  margin: 85px auto 0px auto;
   min-width: 300px;
   font-family: cursive;
+  font-size: 400%;
   text-shadow: 1px 3px black;
 }
 
