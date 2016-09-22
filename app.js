@@ -23,37 +23,37 @@ for (var c = 0; c < 5; c++) {
 }
 
 // Question 6
-var gotIt = false;
-var tries = 4;
+var triesLeft = 4;
 var age = Math.round(Math.random() * 30 + 70);
-while (tries > 0 && !gotIt) {
-  tries--;
+var finalMessage = 'Nope. ';
+var howClose = '';
+while (triesLeft > 0 && answer6 !== age) {
+  triesLeft--;
   var answer6 = parseInt(prompt('How old is my imaginary oldest grandmother?'));
   if (answer6 === age) {
-    alert('That\'s right!');
     score++;
-    gotIt = true;
-  } else if (answer6 <= age) {
-    alert('Too low! You have ' + tries + ' more guesses.');
+    finalMessage = 'Congratulations! ';
   } else {
-    alert('Too high! You have ' + tries + ' more guesses.');
+    if (Math.abs(answer6 - age) < 3) {
+      howClose = ' But you\'re close!';
+    }
+    if (answer6 <= age) {
+      alert('Too low! You have ' + triesLeft + ' more guesses.' + howClose);
+    } else {
+      alert('Too high! You have ' + triesLeft + ' more guesses.' + howClose);
+    }
   }
-  if (!gotIt && Math.abs(answer6 - age) < 3) {
-    alert('You\'re close!');
-  }
-  console.log('#6: Guess is ' + answer6 + '. Answer is ' + age + '. Tries left: ' + tries + '. Score is ' + score);
+  console.log('#6: Guess is ' + answer6 + '. Answer is ' + age + '. Tries left: ' + triesLeft + '. Score is ' + score);
 }
-if (!gotIt) {
-  alert('She is ' + age + ' years old.');
-}
+alert(finalMessage + 'Her age is ' + age);
 
 // Question 7
-gotIt = false;
-tries = 6;
-var foodList = ['celery', 'olives', 'kale', 'arugula', 'brazil nuts', 'hazelnuts', 'blue cheese'];
+var gotIt = false;
+triesLeft = 6;
+var foodList = ['celery', 'olives', 'kale', 'arugula', 'brazil nuts', 'hazelnuts', 'blue cheese', 'kidney beans'];
 var numFoods = foodList.length;
-while (tries > 0 && !gotIt) {
-  tries--;
+while (triesLeft > 0 && !gotIt) {
+  triesLeft--;
   var answer7 = prompt('Name one of my top ' + foodList.length + ' least favorite foods. \(use the plural form when applicable\)').toLowerCase();
   for (var i = 0; i < numFoods; i++) {
     if (answer7 === foodList[i]) {
@@ -62,12 +62,12 @@ while (tries > 0 && !gotIt) {
       gotIt = true;
     }
   }
-  if (!gotIt && tries > 0) {
-    alert('Try again. You have ' + tries + ' more guesses.');
-  } else if (tries === 0) {
+  if (!gotIt && triesLeft > 0) {
+    alert('Try again. You have ' + triesLeft + ' more guesses.');
+  } else if (triesLeft === 0) {
     alert('You have no more guesses.');
   }
-  console.log('#7: Guess is ' + answer7 + '. gotIt? = ' + gotIt + '. Tries left: ' + tries + '. Score is ' + score);
+  console.log('#7: Guess is ' + answer7 + '. gotIt? = ' + gotIt + '. Tries left: ' + triesLeft + '. Score is ' + score);
 }
 
 var foodSentence = 'In no particular order, my least favorite foods are: ' + foodList[0];
