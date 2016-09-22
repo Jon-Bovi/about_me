@@ -1,6 +1,7 @@
 'use strict';
 
 var username = prompt('What\'s your username?');
+console.log(username);
 var score = 0;
 var questions = ['Do I prefer chicken breast to chicken thighs?', 'Is my favorite Harry Potter creature the hippogriff?', 'Do I know to dance the Soulja BoY?', 'Are the inner depths of my soul pitched in total blackness?', 'Do I have any hope for the future of America?'];
 var no = ['no', 'n'];
@@ -18,6 +19,7 @@ for (var c = 0; c < 5; c++) {
     correctOrNot = 'incorrect';
   }
   alert(username + ', you are ' + correctOrNot + '!');
+  console.log('#' + c + ': ' + username + ' answered ' + userAnswer + '. Correct answer is ' + answers[c] + '. Score is ' + score);
 }
 
 // // Default correctness sets to incorrect before each question
@@ -82,7 +84,7 @@ while (tries > 0 && !gotIt) {
     alert('That\'s right!');
     score++;
     gotIt = true;
-  } else if (answer6 <= 97) {
+  } else if (answer6 <= age) {
     alert('Too low! You have ' + tries + ' more guesses.');
   } else {
     alert('Too high! You have ' + tries + ' more guesses.');
@@ -90,6 +92,7 @@ while (tries > 0 && !gotIt) {
   if (!gotIt && Math.abs(answer6 - age) < 3) {
     alert('You\'re close!');
   }
+  console.log('#6: Guess is ' + answer6 + '. Answer is ' + age + '. Tries left: ' + tries + '. Score is ' + score);
 }
 if (!gotIt) {
   alert('She is ' + age + ' years old.');
@@ -115,6 +118,7 @@ while (tries > 0 && !gotIt) {
   } else if (tries === 0) {
     alert('You have no more guesses.');
   }
+  console.log('#7: Guess is ' + answer7 + '. gotIt? = ' + gotIt + '. Tries left: ' + tries + '. Score is ' + score);
 }
 
 var foodSentence = 'In no particular order, my least favorite foods are: ' + foodList[0];
