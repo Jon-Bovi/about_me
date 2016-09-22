@@ -22,57 +22,6 @@ for (var c = 0; c < 5; c++) {
   console.log('#' + c + ': ' + username + ' answered ' + userAnswer + '. Correct answer is ' + answers[c] + '. Score is ' + score);
 }
 
-// // Default correctness sets to incorrect before each question
-// // Question 1
-// var correctOrNot = 'incorrect';
-// var answer1 = prompt('Do I prefer chicken breast to chicken thighs?').toLowerCase();
-// console.log('User answer1 is ' + answer1);
-// if (answer1 === 'no' || answer1 === 'n') {
-//   correctOrNot = 'correct';
-//   score++;
-// }
-// alert(username + ', you are ' + correctOrNot + '!');
-//
-// // Question 2
-// correctOrNot = 'incorrect';
-// var answer2 = prompt('Is my favorite Harry Potter creature the hippogriff?').toLowerCase();
-// console.log('User answer2 is ' + answer2);
-// if (answer2 === 'no' || answer2 === 'n') {
-//   correctOrNot = 'correct';
-//   score++;
-// }
-// alert(username + ', you are ' + correctOrNot + '!');
-//
-// // Question 3
-// correctOrNot = 'incorrect';
-// var answer3 = prompt('Do I know to dance the Soulja BoY?').toLowerCase();
-// console.log('User answer3 is ' + answer3);
-// if (answer3 === 'yes' || answer3 === 'y') {
-//   correctOrNot = 'correct';
-//   score++;
-// }
-// alert(username + ', you are ' + correctOrNot + '!');
-//
-// // Question 4
-// correctOrNot = 'incorrect';
-// var answer4 = prompt('Are the inner depths of my soul pitched in total blackness?').toLowerCase();
-// console.log('User answer4 is ' + answer4);
-// if (answer4 === 'no' || answer4 === 'n') {
-//   correctOrNot = 'correct';
-//   score++;
-// }
-// alert(username + ', you are ' + correctOrNot + '!');
-//
-// // Question 5
-// correctOrNot = 'incorrect';
-// var answer5 = prompt('Do I have any hope for the future of America?').toLowerCase();
-// console.log('User answer5 is ' + answer5);
-// if (answer5 === 'yes' || answer5 === 'y') {
-//   correctOrNot = 'correct';
-//   score++;
-// }
-// alert(username + ', you are ' + correctOrNot + '!');
-
 // Question 6
 var gotIt = false;
 var tries = 4;
