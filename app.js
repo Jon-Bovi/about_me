@@ -28,23 +28,24 @@ function guessGrandmasAge() {
   var age = Math.round(Math.random() * 30 + 70);
   var finalMessage = 'Nope. ';
   var howClose = '';
-  while (triesLeft > 0 && answer6 !== age) {
+  var ageGuessed = 0;
+  while (triesLeft > 0 && ageGuessed !== age) {
     triesLeft--;
-    var answer6 = parseInt(prompt('How old is my imaginary oldest grandmother?'));
-    if (answer6 === age) {
+    ageGuessed = parseInt(prompt('How old is my imaginary oldest grandmother?'));
+    if (ageGuessed === age) {
       score++;
       finalMessage = 'Congratulations! ';
     } else {
-      if (Math.abs(answer6 - age) < 3) {
+      if (Math.abs(ageGuessed - age) < 3) {
         howClose = ' But you\'re close!';
       }
-      if (answer6 <= age) {
+      if (ageGuessed <= age) {
         alert('Too low! You have ' + triesLeft + ' more guesses.' + howClose);
       } else {
         alert('Too high! You have ' + triesLeft + ' more guesses.' + howClose);
       }
     }
-    console.log('#6: Guess is ' + answer6 + '. Answer is ' + age + '. Tries left: ' + triesLeft + '. Score is ' + score);
+    console.log('#6: Guess is ' + ageGuessed + '. Answer is ' + age + '. Tries left: ' + triesLeft + '. Score is ' + score);
   }
   alert(finalMessage + 'Her age is ' + age);
 }
