@@ -29,6 +29,7 @@ div {
 #ford_logo {
   margin: 30px auto;
   width: 300px;
+  border: 2px solid black;
 }
 
 section {
@@ -47,20 +48,6 @@ h3 {
 
 hr {
   border-color: black;
-}
-
-h1 {
-  margin: 85px auto 0px auto;
-  min-width: 300px;
-  font-family: cursive;
-  font-size: 400%;
-  text-shadow: 1px 3px black;
-}
-
-h4 {
-  text-shadow: 1px 2px black;
-  margin: 0px;
-  font-family: monospace;
 }
 
 p {
