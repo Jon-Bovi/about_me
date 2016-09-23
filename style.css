@@ -30,6 +30,11 @@ div {
   margin: 30px auto;
   width: 300px;
   border: 2px solid black;
+  border-radius: 11px 11px 11px 0px;
+}
+
+#ford_logo:hover {
+  border-color: orange;
 }
 
 section {
@@ -44,6 +49,10 @@ section {
 h3 {
   letter-spacing: .4em;
   font-size: 1em;
+}
+
+h3:hover {
+  color: #EEa822;
 }
 
 hr {
