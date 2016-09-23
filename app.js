@@ -4,7 +4,7 @@ var username = prompt('What\'s your username?');
 console.log(username);
 var score = 0;
 
-function questionsa() {
+function firstQuestions() {
   var questions = ['Do I prefer chicken breast to chicken thighs?', 'Is my favorite Harry Potter creature the hippogriff?', 'Do I know to dance the Soulja BoY?', 'Are the inner depths of my soul pitched in total blackness?', 'Do I have any hope for the future of America?'];
   var no = ['no', 'n'];
   var yes = ['yes', 'y'];
@@ -23,7 +23,7 @@ function questionsa() {
   }
 }
 
-function questionb() {
+function question6() {
   var triesLeft = 4;
   var age = Math.round(Math.random() * 30 + 70);
   var finalMessage = 'Nope. ';
@@ -49,7 +49,7 @@ function questionb() {
   alert(finalMessage + 'Her age is ' + age);
 }
 
-function food() {
+function question7() {
   var gotIt = false;
   var triesLeft = 6;
   var foodList = ['celery', 'olives', 'kale', 'arugula', 'brazil nuts', 'hazelnuts', 'blue cheese', 'kidney beans'];
@@ -80,7 +80,7 @@ function food() {
   alert(foodSentence);
 }
 
-function theEnd() {
+function tellScore() {
   var message;
   if (score === 7) {
     message = 'Holy cow ' + username + '! ';
@@ -95,9 +95,9 @@ function theEnd() {
 }
 
 function mothafucktion() {
-  questionsa();
-  questionb();
-  food();
-  theEnd();
+  firstQuestions();
+  question6();
+  question7();
+  tellScore();
 }
 mothafucktion();
