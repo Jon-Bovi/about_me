@@ -1,36 +1,48 @@
 * {
-  font-family: arial;
+  font-family: sans-serif;
 }
 
 body {
-  background-image: url("ford-logo.png");
-  color: #eaeaea;
+  background-image: url("blue.jpg");
+  color: #cccccc;
+  margin: 0px;
+  padding: 0px;
+}
+
+#background {
+  position: fixed;
+  z-index: -2;
+}
+
+#egg {
+  position: fixed;
+  z-index: -1;
+  margin: 250px 50px 0px 0px;
 }
 
 div {
   padding: 0px 20px;
   margin: 0px 100px;
+  margin-bottom: 1000px;
 }
 
-header {
-  text-align: center;
-  background-image: url("blue.jpg");
-  /*background-color: #1351cc;*/
-  border-radius: 50%;
-  border: 9px double #cccccc;
-  padding-top: 0px;
-  margin: auto;
-  width: 77%;
-  height:300px;
+#ford_logo {
+  margin: 30px auto;
+  width: 300px;
 }
 
 section {
-  border-radius: 8px;
   border: 1px solid black;
   padding-left: 15px;
   padding-right: 20px;
-  background-color: #192333;
-  margin: 5px auto;
+  background-color: #192435;
+  margin: 30px auto;
+  border-radius: 0px 0px 40% 0px;
+}
+
+h3 {
+  letter-spacing: .4em;
+  font-size: 1em;
 }
 
 hr {
@@ -53,7 +65,7 @@ h4 {
 
 p {
   padding-left: 20px;
-  line-height: 130%;
+  line-height: 150%;
 }
 
 table {
@@ -68,4 +80,9 @@ td {
 
 li {
   line-height: 160%;
+}
+
+p, li, td {
+  letter-spacing: 2px;
+  font-size: 13px;
 }
