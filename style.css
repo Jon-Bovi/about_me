@@ -85,4 +85,5 @@ li {
 p, li, td {
   letter-spacing: 2px;
   font-size: 13px;
+  font-weight: lighter;
 }
