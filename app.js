@@ -4,7 +4,7 @@ var username = prompt('What\'s your username?');
 console.log(username);
 var score = 0;
 
-function firstQuestions() {
+function simpleQuestionsAboutMe() {
   var questions = ['Do I prefer chicken breast to chicken thighs?', 'Is my favorite Harry Potter creature the hippogriff?', 'Do I know to dance the Soulja BoY?', 'Are the inner depths of my soul pitched in total blackness?', 'Do I have any hope for the future of America?'];
   var no = ['no', 'n'];
   var yes = ['yes', 'y'];
@@ -23,7 +23,7 @@ function firstQuestions() {
   }
 }
 
-function question6() {
+function guessGrandmasAge() {
   var triesLeft = 4;
   var age = Math.round(Math.random() * 30 + 70);
   var finalMessage = 'Nope. ';
@@ -49,7 +49,7 @@ function question6() {
   alert(finalMessage + 'Her age is ' + age);
 }
 
-function question7() {
+function guessBadFood() {
   var gotIt = false;
   var triesLeft = 6;
   var foodList = ['celery', 'olives', 'kale', 'arugula', 'brazil nuts', 'hazelnuts', 'blue cheese', 'kidney beans'];
@@ -94,10 +94,10 @@ function tellScore() {
   alert(message + 'You got ' + score + ' out of 7 questions right.');
 }
 
-function mothafucktion() {
-  firstQuestions();
-  question6();
-  question7();
+function runGuessingGame() {
+  simpleQuestionsAboutMe();
+  guessGrandmasAge();
+  guessBadFood();
   tellScore();
 }
-mothafucktion();
+runGuessingGame();
