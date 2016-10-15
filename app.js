@@ -30,6 +30,7 @@ function guessGrandmasAge() {
   var howClose = '';
   var ageGuessed = 0;
   while (triesLeft > 0 && ageGuessed !== age) {
+    howClose = '';
     triesLeft--;
     ageGuessed = parseInt(prompt('How old is my imaginary oldest grandmother?'));
     if (ageGuessed === age) {
