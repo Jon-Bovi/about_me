@@ -103,5 +103,8 @@ function runGuessingGame() {
   tellScore();
 }
 
-var quizButton = document.getElemenById('ford_logo');
-quizButton.addEventListener('click', runGuessingGame);
+document.getElementById('ford_logo').addEventListener('click', function() {
+  if (window.confirm('Would you like to play a game?')) {
+    runGuessingGame();
+  }
+});
