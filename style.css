@@ -35,6 +35,7 @@ div {
 
 #ford_logo:hover {
   border-color: orange;
+  cursor: pointer;
 }
 
 section {

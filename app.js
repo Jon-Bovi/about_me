@@ -102,4 +102,6 @@ function runGuessingGame() {
   guessBadFood();
   tellScore();
 }
-runGuessingGame();
+
+var quizButton = document.getElemenById('ford_logo');
+quizButton.addEventListener('click', runGuessingGame);
