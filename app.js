@@ -1,8 +1,7 @@
 'use strict';
 
-var username = prompt('What\'s your username?');
-console.log(username);
 var score = 0;
+var username;
 
 function simpleQuestionsAboutMe() {
   var questions = ['Do I prefer chicken breast to chicken thighs?', 'Is my favorite Harry Potter creature the hippogriff?', 'Do I know to dance the Soulja BoY?', 'Are the inner depths of my soul pitched in total blackness?', 'Do I have any hope for the future of America?'];
@@ -97,6 +96,7 @@ function tellScore() {
 }
 
 function runGuessingGame() {
+  username = prompt('What\'s your username?');
   simpleQuestionsAboutMe();
   guessGrandmasAge();
   guessBadFood();
